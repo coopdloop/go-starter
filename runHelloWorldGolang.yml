@@ -1,0 +1,6 @@
+---
+- hosts: localhost
+  connection: local
+  tasks:
+    - name: Run scripts hosts
+      command: go run hello-world.go
