@@ -5,6 +5,6 @@
     - name: cp golang binary
       copy:
         src: /usr/local/go/bin/go
-        dst: /usr/local/go/bin/go
+        dest: /usr/local/go/bin/go
     - name: Run scripts hosts
       script: /usr/local/go/bin/go run hello-world.go
