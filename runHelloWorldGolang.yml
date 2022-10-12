@@ -2,5 +2,9 @@
 - hosts: localhost
   connection: local
   tasks:
+    - name: cp golang binary
+      copy:
+        src: /usr/local/go/bin/go
+        dst: /usr/local/go/bin/go
     - name: Run scripts hosts
       script: /usr/local/go/bin/go run hello-world.go
