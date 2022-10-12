@@ -3,4 +3,4 @@
   connection: local
   tasks:
     - name: Run scripts hosts
-      command: go run hello-world.go
+      command: /usr/local/go/bin/go run hello-world.go
