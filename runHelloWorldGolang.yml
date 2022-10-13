@@ -2,7 +2,7 @@
 - hosts: scripts
  # connection: local
   tasks:
-      - name: Create /opt/scripts
+    - name: Create /opt/scripts
       file:
         path: /opt/scripts
         mode: 0755
