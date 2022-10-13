@@ -1,0 +1,20 @@
+---
+- hosts: scripts
+ # connection: local
+  tasks:
+      - name: Create /opt/scripts
+      file:
+        path: /opt/scripts
+        mode: 0755
+        state: directory
+
+    - name: Copy files to remote host
+      become: yes
+      copy:
+        src: hello-world.go
+        dest: /opt/scripts
+        
+    - name: Run scripts hosts
+      script: /usr/local/go/bin/go run hello-world.go
+      args:
+        chdir: /opt/scripts/
