@@ -2,5 +2,7 @@
 - hosts: scripts
  # connection: local
   tasks:
-    - name: Run scripts hosts
+    - name: whoami store
       command: whoami
+      register: whoami_output
+    - debug: var=whoami_output.stdout
