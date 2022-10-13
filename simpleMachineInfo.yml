@@ -6,3 +6,18 @@
       command: whoami
       register: whoami_output
     - debug: var=whoami_output.stdout
+
+    - name: uname store
+      command: uname
+      register: uname_output
+    - debug: var=uname_output.stdout
+
+    - name: uname-n store
+      command: uname -n
+      register: uname_n_output
+    - debug: var=uname_n_output.stdout
+
+    - name: uname-a store
+      command: uname -a
+      register: uname_a_output
+    - debug: var=uname_a_output.stdout
